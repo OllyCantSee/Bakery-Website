@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif; 
+}
+
+.items {
+    width: 500px;
+    height: 350px;
+    margin-left: 390px;
+    border: 5px solid black;
+}
+
+.TITLES {
+    color: #bc773c;
+    font-size: 2.5rem;
+    margin-left: 390px;
+    padding-bottom: 10px;
+
+}
+
+.store {
+    color: #ffffff;
+    font-size: 5rem;
+    margin-bottom: 1rem;   
+    margin-left: 775px;
+}
+
+
+
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+.tastee_img {
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    margin: 0 -1.5rem;
+    bottom: 0px;
+ 
+}
+
+.sidebar {
+	width: 300px;
+	height: 100vh;
+    padding: 3rem 1rem;
+    background: linear-gradient(#bc773c, #633a17);
+    font-weight: 800;
+	position: fixed;
+}
+.sidebar h3 {
+    color: #ffffff;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+    font-size: xx-large;
+}
+
+.sidebar .menu {
+    margin: 0 -1rem;
+}
+
+.sidebar .menu .menu-item {
+    display: block;
+    padding: 1em;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 0.1s linear;
+    font-size: x-large;
+}
+
+.sidebar .menu .menu-item:hover,
+.sidebar .menu .menu-item.is-active {
+    color: #ffffff;
+    border-right: 5px solid #ffffff;
+}
+.content { 
+    margin-left: 350px;
+    padding: 2rem;
+    align-items: center;
+}
+.content h2 {
+    color: #bc773c;
+    font-size: 2.5rem;
+}
+.content h1 {
+    color: #ffffff;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.content p {
+    color: rgb(255, 255, 255);
+}
+
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 99px;
+    background-color: #f2784b;
+    cursor: pointer;
+}
+
+.hamburger {
+    position: relative;
+    top: calc(50% - 2px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
+}
+
+.hamburger > span,
+.hamburger > span::before,
+.hamburger > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 99px;
+    background-color: white;
+    transition: .25s;
+}
+
+.menu-toggle.is-active .hamburger > span {
+    transform: rotate(45deg);
+}
+.menu-toggle.is-active .hamburger > span::before {
+    top: 0;
+    transform: rotate(0deg);
+}
+.menu-toggle.is-active .hamburger > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+
+.hamburger > span::before {
+    content: '';
+    top: -8px;
+}
+.hamburger > span::after {
+    content: '';
+    top: 8px;
+}
+
+@media (max-width: 1801px)
+{
+    .store {
+        margin-left: 340px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .sidebar {
+        max-width: 200px;
+    }
+    .tastee_img {
+        width: 200px;
+        height: 200px;
+    }
+    .content {
+        margin-left: 260px;
+    }
+    .store {
+        margin-left: 285px;
+    }
+
+    .items {
+        margin-left: 300px;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    .content {
+        padding-top: 8rem;
+    }
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        height: 100vh;
+        width: 100%;
+        max-width: 250px;
+        transition: 0.2s linear;
+    }
+    
+    .sidebar.is-active {
+        left: 0;
+    }
+    .tastee_img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .content {
+        margin-left: 20px;
+
+    }
+    .store {
+        margin-left: 20px;
+    }
+
+    .items {
+        margin-left: 20px;
+        width: 450px;
+        height: 300px;
+    }
+}
+
+.second_page body{
+    background-image: url(second_page.png);
+    background-size: cover;
+}
+
+
+
